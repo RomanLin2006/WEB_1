@@ -1,97 +1,208 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Мой сайт</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-    }
-    header {
-      background: #333;
-      color: white;
-      padding: 1rem;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-    }
-    section {
-      padding: 2rem;
-    }
-    img {
-      max-width: 300px;
-      border-radius: 10px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-    }
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Домашняя страница — Линейцев Роман</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Главная</a></li>
-        <li><a href="#about">Обо мне</a></li>
-        <li><a href="#schedule">Расписание</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <span class="logo-circle" aria-hidden="true">RP</span>
+                <span class="brand-text">Роман Линейцев</span>
+            </div>
+            <nav class="site-nav" aria-label="Основная навигация">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Меню</button>
+                <ul id="nav-list">
+                    <li><a href="#about">О себе</a></li>
+                    <li><a href="#projects">Проекты</a></li>
+                    <li><a href="#table">Таблица</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <section id="home">
-    <h1>Добро пожаловать на мой сайт!</h1>
-    <img src="https://via.placeholder.com/300" alt="Пример изображения">
-  </section>
+    <main>
+        <section class="hero" id="hero">
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <h1>Привет! Я Роман, студент Московского Политеха</h1>
+                    <p>
+                        Изучаю веб‑разработку и проектирую удобные интерфейсы. На этой странице — кратко обо мне,
+                        мои учебные активности и планы на развитие.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn primary" href="#projects">Смотреть проекты</a>
+                        <a class="btn ghost" href="#contacts">Связаться</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <a class="image-link" href="https://fotora.ru/uploaded/?ID=YBFMZ06112025100940" target="_blank" rel="noopener">
+                        <img src="https://storage.yandexcloud.net/fotora.ru/uploads/891a2e4f1d5a7c8f.png" alt="Приветственное изображение" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </section>
 
-  <section id="about">
-    <h2>Обо мне</h2>
-    <p>Я студент, изучаю веб-разработку. Этот сайт — моя первая лабораторная работа.</p>
-  </section>
+        <section class="section" id="about">
+            <div class="container two-col">
+                <div>
+                    <h2>О себе</h2>
+                    <p>
+                        Я — Линейцев Роман, студент 2 курса группы 241‑361 Московского Политехнического
+                        Университета. Интересуюсь фронтендом (HTML, CSS, JavaScript) и стремлюсь делать
+                        интерфейсы, которые понятны с первого взгляда. Люблю аккуратные сетки, читаемую типографику
+                        и продуманную навигацию.
+                    </p>
+                    <p>
+                        Сейчас осваиваю адаптивную верстку, работу с компонентами, а также основы доступности (ARIA,
+                        контраст, фокус‑индикаторы). В свободное время изучаю дизайн‑системы и лучшие практики UX.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Навыки и инструменты</h3>
+                    <ul class="check-list">
+                        <li>Семантический HTML5 и адаптивный CSS3</li>
+                        <li>Гриды и флексы, мобильные first‑подходы</li>
+                        <li>Базовый JavaScript и работа с DOM</li>
+                        <li>Дизайн‑мышление и прототипирование</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-  <section id="schedule">
-    <h2>Расписание занятий</h2>
-    <table>
-      <tr>
-        <th>День</th>
-        <th>Предмет</th>
-        <th>Время</th>
-      </tr>
-      <tr>
-        <td>Понедельник</td>
-        <td>Веб-разработка</td>
-        <td>10:00-12:00</td>
-      </tr>
-      <tr>
-        <td>Среда</td>
-        <td>Базы данных</td>
-        <td>14:00-16:00</td>
-      </tr>
-    </table>
-  </section>
+        <section class="section alt" id="projects">
+            <div class="container">
+                <h2>Учебные мини‑проекты</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Лэндинг «СтудКлуб»</h3>
+                        <p>Одностраничный сайт мероприятия с расписанием, спикерами и формой регистрации.</p>
+                        <a class="btn small" href="#contacts">Запросить демо</a>
+                    </article>
+                    <article class="card">
+                        <h3>Портфолио работ</h3>
+                        <p>Галерея макетов и прототипов с фильтрами и описанием задач.</p>
+                        <a class="btn small" href="#contacts">Запросить демо</a>
+                    </article>
+                    <article class="card">
+                        <h3>Учебный блог</h3>
+                        <p>Статьи о верстке: шрифты, сетки, анимации и доступность.</p>
+                        <a class="btn small" href="#contacts">Запросить демо</a>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    <p>Контакты: example@email.com | © 2023 Мой сайт</p>
-  </footer>
+        <section class="section" id="table">
+            <div class="container">
+                <h2>Таблица учебных активностей</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Неделя</th>
+                                <th>Тема</th>
+                                <th>Практика</th>
+                                <th>Статус</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>HTML‑семантика</td>
+                                <td>Структура страницы, теги, атрибуты</td>
+                                <td><span class="status done">завершено</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>CSS‑базовые стили</td>
+                                <td>Типографика, цвета, отступы</td>
+                                <td><span class="status done">завершено</span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Сетки: Flex и Grid</td>
+                                <td>Адаптивные раскладки, карточки</td>
+                                <td><span class="status in-progress">в процессе</span></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Доступность</td>
+                                <td>Фокус, контраст, aria‑метки</td>
+                                <td><span class="status planned">планируется</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt" id="contacts">
+            <div class="container two-col">
+                <div>
+                    <h2>Контакты</h2>
+                    <p>
+                        Если вам интересны мои учебные проекты или вы хотите дать обратную связь, напишите — буду рад
+                        сотрудничеству и советам.
+                    </p>
+                    <ul class="contact-list">
+                        <li><strong>Имя:</strong> Линейцев Роман</li>
+                        <li><strong>Группа:</strong> 241‑361</li>
+                        <li><strong>Телефон:</strong> <a href="tel:+79248337781">+7 924 833‑77‑81</a></li>
+                        <li><strong>Почта:</strong> <a href="mailto:romanxxxl2006@yandex.ru">romanxxxl2006@yandex.ru</a></li>
+                        <li><strong>Статус:</strong> студент 2 курса Московского Политеха</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Ссылка на приветственное фото</h3>
+                    <p>
+                        <a href="https://fotora.ru/uploaded/?ID=YBFMZ06112025100940" target="_blank" rel="noopener">Открыть на fotora</a>
+                    </p>
+                    <p>
+                        <a href="https://storage.yandexcloud.net/fotora.ru/uploads/891a2e4f1d5a7c8f.png" target="_blank" rel="noopener">Прямая ссылка на изображение</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <p>© <span id="year"></span> Линейцев Роман. Все права защищены.</p>
+                <p>Учебный проект для дисциплины по веб‑разработке.</p>
+            </div>
+            <nav aria-label="Ссылки в футере">
+                <ul class="footer-nav">
+                    <li><a href="#hero">Наверх</a></li>
+                    <li><a href="#about">О себе</a></li>
+                    <li><a href="#projects">Проекты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const list = document.getElementById('nav-list');
+        if (toggle && list) {
+            toggle.addEventListener('click', () => {
+                const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                toggle.setAttribute('aria-expanded', String(!expanded));
+                list.classList.toggle('open');
+            });
+        }
+        const y = document.getElementById('year');
+        if (y) y.textContent = String(new Date().getFullYear());
+    </script>
 </body>
 </html>
+
+
