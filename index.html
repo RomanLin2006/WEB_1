@@ -13,12 +13,11 @@
     <header class="site-header">
         <div class="container header-inner">
             <div class="brand">
-                <span class="logo-circle" aria-hidden="true">RP</span>
+                <span class="logo-circle">RP</span>
                 <span class="brand-text">Роман Линейцев</span>
             </div>
-            <nav class="site-nav" aria-label="Основная навигация">
-                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list">Меню</button>
-                <ul id="nav-list">
+            <nav class="site-nav">
+                <ul>
                     <li><a href="#about">О себе</a></li>
                     <li><a href="#projects">Проекты</a></li>
                     <li><a href="#table">Таблица</a></li>
@@ -43,9 +42,7 @@
                     </div>
                 </div>
                 <div class="hero-media">
-                    <a class="image-link" href="https://fotora.ru/uploaded/?ID=YBFMZ06112025100940" target="_blank" rel="noopener">
-                        <img src="https://storage.yandexcloud.net/fotora.ru/uploads/891a2e4f1d5a7c8f.png" alt="Приветственное изображение" loading="lazy">
-                    </a>
+                    <img src="https://storage.yandexcloud.net/fotora.ru/uploads/891a2e4f1d5a7c8f.png" alt="Приветственное изображение">
                 </div>
             </div>
         </section>
@@ -145,30 +142,19 @@
         </section>
 
         <section class="section alt" id="contacts">
-            <div class="container two-col">
-                <div>
-                    <h2>Контакты</h2>
-                    <p>
-                        Если вам интересны мои учебные проекты или вы хотите дать обратную связь, напишите — буду рад
-                        сотрудничеству и советам.
-                    </p>
-                    <ul class="contact-list">
-                        <li><strong>Имя:</strong> Линейцев Роман</li>
-                        <li><strong>Группа:</strong> 241‑361</li>
-                        <li><strong>Телефон:</strong> <a href="tel:+79248337781">+7 924 833‑77‑81</a></li>
-                        <li><strong>Почта:</strong> <a href="mailto:romanxxxl2006@yandex.ru">romanxxxl2006@yandex.ru</a></li>
-                        <li><strong>Статус:</strong> студент 2 курса Московского Политеха</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Ссылка на приветственное фото</h3>
-                    <p>
-                        <a href="https://fotora.ru/uploaded/?ID=YBFMZ06112025100940" target="_blank" rel="noopener">Открыть на fotora</a>
-                    </p>
-                    <p>
-                        <a href="https://storage.yandexcloud.net/fotora.ru/uploads/891a2e4f1d5a7c8f.png" target="_blank" rel="noopener">Прямая ссылка на изображение</a>
-                    </p>
-                </div>
+            <div class="container">
+                <h2>Контакты</h2>
+                <p>
+                    Если вам интересны мои учебные проекты или вы хотите дать обратную связь, напишите — буду рад
+                    сотрудничеству и советам.
+                </p>
+                <ul class="contact-list">
+                    <li><strong>Имя:</strong> Линейцев Роман</li>
+                    <li><strong>Группа:</strong> 241‑361</li>
+                    <li><strong>Телефон:</strong> <a href="tel:+79248337781">+7 924 833‑77‑81</a></li>
+                    <li><strong>Почта:</strong> <a href="mailto:romanxxxl2006@yandex.ru">romanxxxl2006@yandex.ru</a></li>
+                    <li><strong>Статус:</strong> студент 2 курса Московского Политеха</li>
+                </ul>
             </div>
         </section>
     </main>
@@ -176,10 +162,10 @@
     <footer class="site-footer">
         <div class="container footer-inner">
             <div>
-                <p>© <span id="year"></span> Линейцев Роман. Все права защищены.</p>
+                <p>© 2025 Линейцев Роман. Все права защищены.</p>
                 <p>Учебный проект для дисциплины по веб‑разработке.</p>
             </div>
-            <nav aria-label="Ссылки в футере">
+            <nav>
                 <ul class="footer-nav">
                     <li><a href="#hero">Наверх</a></li>
                     <li><a href="#about">О себе</a></li>
@@ -188,21 +174,5 @@
             </nav>
         </div>
     </footer>
-
-    <script>
-        const toggle = document.querySelector('.nav-toggle');
-        const list = document.getElementById('nav-list');
-        if (toggle && list) {
-            toggle.addEventListener('click', () => {
-                const expanded = toggle.getAttribute('aria-expanded') === 'true';
-                toggle.setAttribute('aria-expanded', String(!expanded));
-                list.classList.toggle('open');
-            });
-        }
-        const y = document.getElementById('year');
-        if (y) y.textContent = String(new Date().getFullYear());
-    </script>
 </body>
 </html>
-
-
