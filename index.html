@@ -2,25 +2,22 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Домашняя страница — Линейцев Роман</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашняя страница — Роман Линейцев</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container header-inner">
-            <div class="brand">
-                <span class="logo-circle">RP</span>
-                <span class="brand-text">Роман Линейцев</span>
-            </div>
-            <nav class="site-nav">
-                <ul>
-                    <li><a href="#about">О себе</a></li>
-                    <li><a href="#projects">Проекты</a></li>
-                    <li><a href="#table">Таблица</a></li>
+    <header>
+        <div class="container header-content">
+            <h1 class="logo">Моя страница</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#welcome">Главная</a></li>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#schedule">Учеба</a></li>
                     <li><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
@@ -28,150 +25,81 @@
     </header>
 
     <main>
-        <section class="hero" id="hero">
-            <div class="container hero-inner">
-                <div class="hero-text">
-                    <h1>Привет! Я Роман, студент Московского Политеха</h1>
-                    <p>
-                        Изучаю веб‑разработку и проектирую удобные интерфейсы. На этой странице — кратко обо мне,
-                        мои учебные активности и планы на развитие.
-                    </p>
-                    <div class="hero-actions">
-                        <a class="btn primary" href="#projects">Смотреть проекты</a>
-                        <a class="btn ghost" href="#contacts">Связаться</a>
-                    </div>
+        <section id="welcome" class="section">
+            <div class="container welcome-block">
+                <div class="text">
+                    <h2>Привет, я Роман!</h2>
+                    <p>Я учусь на втором курсе Московского Политеха и осваиваю основы веб-разработки. Этот сайт я сделал, чтобы показать, как базовые теги HTML и простые стили помогают собрать аккуратную домашнюю страницу.</p>
+                    <p>На странице есть шапка с меню, изображение, список моих увлечений, таблица с расписанием и блок с контактами.</p>
                 </div>
-                <div class="hero-media">
-                    <img src="https://storage.yandexcloud.net/fotora.ru/uploads/891a2e4f1d5a7c8f.png" alt="Приветственное изображение">
+                <div class="photo-wrapper">
+                    <img src="https://storage.yandexcloud.net/fotora.ru/uploads/891a2e4f1d5a7c8f.png">
                 </div>
             </div>
         </section>
 
-        <section class="section" id="about">
-            <div class="container two-col">
-                <div>
-                    <h2>О себе</h2>
-                    <p>
-                        Я — Линейцев Роман, студент 2 курса группы 241‑361 Московского Политехнического
-                        Университета. Интересуюсь фронтендом (HTML, CSS, JavaScript) и стремлюсь делать
-                        интерфейсы, которые понятны с первого взгляда. Люблю аккуратные сетки, читаемую типографику
-                        и продуманную навигацию.
-                    </p>
-                    <p>
-                        Сейчас осваиваю адаптивную верстку, работу с компонентами, а также основы доступности (ARIA,
-                        контраст, фокус‑индикаторы). В свободное время изучаю дизайн‑системы и лучшие практики UX.
-                    </p>
-                </div>
-                <div class="card">
-                    <h3>Навыки и инструменты</h3>
-                    <ul class="check-list">
-                        <li>Семантический HTML5 и адаптивный CSS3</li>
-                        <li>Гриды и флексы, мобильные first‑подходы</li>
-                        <li>Базовый JavaScript и работа с DOM</li>
-                        <li>Дизайн‑мышление и прототипирование</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="section alt" id="projects">
+        <section id="about" class="section light">
             <div class="container">
-                <h2>Учебные мини‑проекты</h2>
-                <div class="cards">
-                    <article class="card">
-                        <h3>Лэндинг «СтудКлуб»</h3>
-                        <p>Одностраничный сайт мероприятия с расписанием, спикерами и формой регистрации.</p>
-                        <a class="btn small" href="#contacts">Запросить демо</a>
-                    </article>
-                    <article class="card">
-                        <h3>Портфолио работ</h3>
-                        <p>Галерея макетов и прототипов с фильтрами и описанием задач.</p>
-                        <a class="btn small" href="#contacts">Запросить демо</a>
-                    </article>
-                    <article class="card">
-                        <h3>Учебный блог</h3>
-                        <p>Статьи о верстке: шрифты, сетки, анимации и доступность.</p>
-                        <a class="btn small" href="#contacts">Запросить демо</a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="table">
-            <div class="container">
-                <h2>Таблица учебных активностей</h2>
-                <div class="table-wrap">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Неделя</th>
-                                <th>Тема</th>
-                                <th>Практика</th>
-                                <th>Статус</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>HTML‑семантика</td>
-                                <td>Структура страницы, теги, атрибуты</td>
-                                <td><span class="status done">завершено</span></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>CSS‑базовые стили</td>
-                                <td>Типографика, цвета, отступы</td>
-                                <td><span class="status done">завершено</span></td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Сетки: Flex и Grid</td>
-                                <td>Адаптивные раскладки, карточки</td>
-                                <td><span class="status in-progress">в процессе</span></td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Доступность</td>
-                                <td>Фокус, контраст, aria‑метки</td>
-                                <td><span class="status planned">планируется</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <section class="section alt" id="contacts">
-            <div class="container">
-                <h2>Контакты</h2>
-                <p>
-                    Если вам интересны мои учебные проекты или вы хотите дать обратную связь, напишите — буду рад
-                    сотрудничеству и советам.
-                </p>
-                <ul class="contact-list">
-                    <li><strong>Имя:</strong> Линейцев Роман</li>
-                    <li><strong>Группа:</strong> 241‑361</li>
-                    <li><strong>Телефон:</strong> <a href="tel:+79248337781">+7 924 833‑77‑81</a></li>
-                    <li><strong>Почта:</strong> <a href="mailto:romanxxxl2006@yandex.ru">romanxxxl2006@yandex.ru</a></li>
-                    <li><strong>Статус:</strong> студент 2 курса Московского Политеха</li>
+                <h2>Чем я увлекаюсь</h2>
+                <p>Я стараюсь развиваться в разных направлениях, чтобы лучше понимать, как создаются современные сайты и приложения.</p>
+                <ul class="plain-list">
+                    <li>читаю статьи про HTML, CSS и основы JavaScript;</li>
+                    <li>рисую эскизы интерфейсов и пробую себя в дизайне;</li>
+                    <li>участвую в университетских клубах по программированию;</li>
+                    <li>помогаю одногруппникам разбирать домашние задания.</li>
                 </ul>
+            </div>
+        </section>
+
+        <section id="schedule" class="section">
+            <div class="container">
+                <h2>Учебное расписание на неделю</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>День</th>
+                            <th>Предмет</th>
+                            <th>Задача на неделю</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Понедельник</td>
+                            <td>Основы веб-технологий</td>
+                            <td>Повторить структуру HTML-документа</td>
+                        </tr>
+                        <tr>
+                            <td>Среда</td>
+                            <td>Практика по CSS</td>
+                            <td>Настроить отступы и цвета для блоков</td>
+                        </tr>
+                        <tr>
+                            <td>Пятница</td>
+                            <td>Командный проект</td>
+                            <td>Собрать простую страницу портфолио</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="contacts" class="section light">
+            <div class="container">
+                <h2>Как со мной связаться</h2>
+                <p>Если хотите обсудить учебные задания или поделиться идеями по улучшению этого сайта, напишите мне удобным способом.</p>
+                <div class="contact-block">
+                    <p><strong>Телефон:</strong> <a href="tel:+79248337781">+7 924 833-77-81</a></p>
+                    <p><strong>Почта:</strong> <a href="mailto:romanxxxl2006@yandex.ru">romanxxxl2006@yandex.ru</a></p>
+                    <p><strong>Адрес:</strong> Москва, Большая Семеновская, 38</p>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <div>
-                <p>© 2025 Линейцев Роман. Все права защищены.</p>
-                <p>Учебный проект для дисциплины по веб‑разработке.</p>
-            </div>
-            <nav>
-                <ul class="footer-nav">
-                    <li><a href="#hero">Наверх</a></li>
-                    <li><a href="#about">О себе</a></li>
-                    <li><a href="#projects">Проекты</a></li>
-                </ul>
-            </nav>
+    <footer>
+        <div class="container footer-content">
+            <p>© 2025 Роман Линейцев. Домашнее задание по основам веб-разработки.</p>
+            <p>Сделано только с базовыми тегами и простыми стилями.</p>
         </div>
     </footer>
 </body>
